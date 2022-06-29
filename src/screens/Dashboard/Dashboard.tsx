@@ -10,12 +10,15 @@ import {
   UserGreeting,
   UserName,
   Icon,
+  HighligthCards,
 } from './styles';
+import { HighligthCard } from '../../components/HighligthCard/HighligthCard';
 
 export const Dashboard = () => {
 
   return (
     <Contaniner>
+
       <Header>
         <UserWrapper>
           <UserInfo>
@@ -30,6 +33,13 @@ export const Dashboard = () => {
           <Icon name="power" />
         </UserWrapper>
       </Header>
+
+      <HighligthCards >
+        <HighligthCard />
+        <HighligthCard />
+        <HighligthCard />
+      </HighligthCards >
+
     </Contaniner>
 
   )
