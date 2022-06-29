@@ -1,6 +1,6 @@
 import React from "react";
 
-import { 
+import {
   Container,
   Header,
   Title,
@@ -8,21 +8,39 @@ import {
   Footer,
   Amount,
   LastTransaction,
- } from './styles';
+} from './styles';
 
-export const HighligthCard = () => {
+interface HighligthCardProps {
+  title: string;
+  amaunt: string;
+  lastTransaction: string;
+  type: 'up' | 'down' | 'total';
+}
 
+const icons = {
+  up: 'arrow-up-circle',
+  down: 'arrow-down-circle',
+  total: 'dollar-sign',
+}
+
+export const HighligthCard = ({ title, amaunt, lastTransaction, type }: HighligthCardProps) => {
 
   return (
-    <Container>
+    <Container type={type}>
       <Header>
-        <Title>Entrada</Title>
-        <Icon name="arrow-up-circle"/>
+        <Title type={type}>
+          {title}
+        </Title>
+        <Icon name={icons[type]} type={type} />
       </Header>
 
       <Footer>
-        <Amount>R$17.000,00</Amount>
-        <LastTransaction>Úiltima entrada 13 de abril</LastTransaction>
+        <Amount type={type}>
+          {amaunt}
+        </Amount>
+        <LastTransaction type={type}>
+          {lastTransaction}
+        </LastTransaction>
       </Footer>
 
     </Container>

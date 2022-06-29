@@ -1,5 +1,4 @@
 import React from 'react'
-import { Feather } from '@expo/vector-icons';
 import {
   Contaniner,
   Header,
@@ -35,9 +34,24 @@ export const Dashboard = () => {
       </Header>
 
       <HighligthCards >
-        <HighligthCard />
-        <HighligthCard />
-        <HighligthCard />
+        <HighligthCard
+          title='Entradas'
+          amaunt='R$ 17.400,00'
+          lastTransaction='Última entrada dia 13 de abril'
+          type='up'
+        />
+        <HighligthCard
+          title='Saídas'
+          amaunt='R$ 1.259,00'
+          lastTransaction='Última saída dia 03 de abril'
+          type='down'
+        />
+        <HighligthCard
+          title='Total'
+          amaunt='R$ 16.141,00'
+          lastTransaction='01 à 16 de abril'
+          type='total'
+        />
       </HighligthCards >
 
     </Contaniner>
