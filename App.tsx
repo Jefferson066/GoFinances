@@ -13,6 +13,7 @@ import theme from './src/global/styles/theme';
 import { Dashboard } from './src/screens/Dashboard/Dashboard';
 import AppLoading from 'expo-app-loading';
 import { Register } from './src/screens/Register/Register';
+import { CategorySelect } from './src/screens/CategorySelect/CategorySelect';
 
 
 export default function App() {
@@ -30,7 +31,8 @@ export default function App() {
   return (  
     <ThemeProvider theme={theme}>
       {/* <Dashboard/> */}
-      <Register/>
+      {/* <Register/> */}
+      <CategorySelect/>
     </ThemeProvider>
   );
 }
